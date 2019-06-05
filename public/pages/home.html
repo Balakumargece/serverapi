@@ -1,0 +1,22 @@
+<div class="text-center">
+        <h1>Home Page</h1>
+        
+        <p>{{ message }}</p>
+		<form>
+                <div class="form-group">
+
+                    <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                    <input type="text" class="form-control input-lg text-center" placeholder="Name" ng-model="formData.name">
+                    <input type="text" class="form-control input-lg text-center" placeholder="Address" ng-model="formData.address">
+
+                </div>
+
+                <!-- createToDo() WILL CREATE NEW TODOS -->
+                <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+            </form>
+        <p ng-repeat="result in value">
+            {{result.name}} -- {{result._id}} 
+            <button type="button" ng-click="update(result._id)">update</button>
+            <button type="button" ng-click="delete(result._id)">delete</button>
+        </p>
+    </div>

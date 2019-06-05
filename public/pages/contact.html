@@ -1,0 +1,20 @@
+<div class="text-center">
+        <h1>Contact Page</h1>
+        
+        <p>{{ message }}</p>
+
+        <form>
+                <div class="form-group">
+
+                    <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                    <input type="text" class="form-control input-lg text-center" 
+                     ng-model="data.name" >
+                    <input type="text" class="form-control input-lg text-center" 
+                     ng-model="data.address" value='{{sample12}}'   >
+
+                </div>
+{{sample12}}
+                <!-- createToDo() WILL CREATE NEW TODOS -->
+                <button type="submit" class="btn btn-primary btn-lg" ng-click="updatesave(data._id)">update</button>
+            </form>
+    </div>
